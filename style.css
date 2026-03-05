@@ -769,10 +769,17 @@ nav {
 
 @media (max-width: 768px) {
     #why-us h3 {
-    font-size: 2rem;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-}
+        max-width: 500px;
+        font-size: 2rem;
+        margin-top: 3rem;
+        margin-bottom: 0.5rem;
+    }
+    .why_card h4 {
+        font-size: 1.2rem;
+    }
+    .why_card p {
+        font-size: 0.7rem;
+    }
 }
 
 /* OUR PROCESS */
@@ -834,6 +841,10 @@ nav {
     box-shadow: 2px 2px 10px rgba(0, 128, 128, 0.3);
 }
 
+.process_card h4 {
+    margin-bottom: 0.5rem;
+    }
+
 .process_card.rd , .process_card.ca {
     margin-left: 12rem;
 }
@@ -844,6 +855,15 @@ nav {
     }
     .process_card.rd , .process_card.ca {
         margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .process_card h4 {
+        font-size: 1.2rem;
+    }
+    .process_card p {
+        font-size: 0.7rem;
     }
 }
 
