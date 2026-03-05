@@ -2,6 +2,12 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
 :root {
     --color: #c7c7c7;
 }
@@ -21,8 +27,6 @@ body {
     font-style: normal;
     color: rgb(255, 255, 255);
     line-height: 1.6;
-    overflow-x: hidden;
-    position: relative;
     background: rgb(18, 18, 18);
     
 }
@@ -282,8 +286,6 @@ nav {
     font-size: 0.55rem;
     font-weight: 500;
     white-space: nowrap;
-    /* opacity: 0;
-    visibility: hidden; */
     transition: all 0.3s ease;
     pointer-events: none;
 }
@@ -294,6 +296,13 @@ nav {
     }
     .menu_button {
         display: block;
+    }
+}
+
+@media (max-width:600px) {
+    nav {
+        gap: 2rem;
+        padding: 20px 20px;
     }
 }
 
@@ -515,6 +524,9 @@ nav {
     .about_container h3 {
         font-size: 2.2rem;
     }
+    .about_container p {
+        font-size: 0.7rem;
+    }
 }
 
 /* SERVICES */
@@ -656,6 +668,14 @@ nav {
     .service_card {
         padding: 30px 20px;
     }
+
+    .service_card h4 {
+        font-size: 1.2rem;
+    }
+
+    .service_card p {
+        font-size: 0.7rem;
+    }
 }
 
 /* WHY CHOOSE US */
@@ -744,6 +764,15 @@ nav {
     .why_container {
         margin: 0;
     }
+}
+
+
+@media (max-width: 768px) {
+    #why-us h3 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
 }
 
 /* OUR PROCESS */
