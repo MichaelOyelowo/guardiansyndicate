@@ -316,7 +316,56 @@ nav {
     justify-content: center;
     text-align: center;
     padding: 0 20px;
-    overflow: hidden;
+}
+
+.bg-blob {
+    position: absolute;
+    width: 800px;
+    height: 800px; 
+    z-index: 1;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center center;
+}
+
+.bg-blob img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.blob-left {
+    left: -400px;
+    top: -80%;
+    animation: spinClockwise 40s linear infinite;
+}
+
+.blob-right {
+    right: -400px;
+    top: -120%;
+    animation: spinCounterClockwise 50s linear infinite;
+}
+
+@keyframes spinClockwise {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes spinCounterClockwise {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+}
+
+@media (max-width: 890px) {
+    .bg-blob {
+        width: 500px;
+        height: 500px;
+        opacity: 0.9;
+    }
+    .blob-left { left: -250px; top: -20%; }
+    .blob-right { right: -250px; top: -50%; }
 }
 
 .main_hero {
@@ -1011,6 +1060,15 @@ nav {
         line-height: 1.5;
         margin-bottom: 1.5rem;
         opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .cta-content h3 {
+        font-size: 1.2rem;
+    }
+    .cta_content p {
+        font-size: 0.7rem;
     }
 }
 
